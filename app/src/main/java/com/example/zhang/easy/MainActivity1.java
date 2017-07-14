@@ -22,17 +22,6 @@ public class MainActivity1 extends AppCompatActivity {
         // hours
         initHours();
 
-        Intent intent = getIntent();
-        if(Intent.ACTION_VIEW.equals(intent.getAction())){
-            Uri data = intent.getData();
-            String id = data.getQueryParameter("id");
-            String name = data.getQueryParameter("name");
-
-            Log.d(TAG, "onCreate: "+name+"--------------"+id);
-        }
-
-
-
     }
     private void initHours() {
         epvH = (EasyPickerView) findViewById(R.id.epv_h);
